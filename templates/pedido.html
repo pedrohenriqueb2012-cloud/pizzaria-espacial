@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pedido enviado</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+
+    <body>
+        <h1>Pedido Enviado!</h1>
+
+        <img 
+            src="{{ url_for('static', filename='imagens/' + imagem_planeta + '.png') }}"
+            class="planeta"
+        >
+
+        <h2>Olá, {{ nome }}</h2>
+
+        <p> Seu pedido é: </p>
+        <p>pizza: {{ pizza }}</p>
+        <p>borda: {{ borda }}</p>
+        <p>tamanho: {{ tamanho }}</p>
+        <p>bebida: {{ bebida }}</p>
+
+        <p>
+            Sua pizza será enviada para:
+            <strong>{{ planeta }}</strong>
+        </p>
+
+        <h2><strong>total: R$ {{ total }}</strong></h2>
+
+        <a href="/">
+        <button>
+            Fazer outro pedido
+        </button>
+         </a>
+
+    </body>
+</html>

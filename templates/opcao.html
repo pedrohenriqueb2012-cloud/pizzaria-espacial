@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Opções do Pedido</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <h1>Configuração do Pedido 🚀</h1>
+
+    <h2>Astronauta: {{ nome }}</h2>
+
+    <p>
+        Destino:
+        <strong>{{ planeta }}</strong>
+    </p>
+
+    <img 
+        src="{{ url_for('static', filename='imagens/' + imagem_planeta + '.png') }}"
+        class="planeta"
+    >
+
+    <form action="/pedido" method="POST">
+
+        <!-- dados escondidos -->
+        <input type="hidden" name="nome" value="{{ nome }}">
+        <input type="hidden" name="planeta" value="{{ planeta }}">
+
+        <br><br>
+
+        <label>Sabor da pizza:</label>
+
+        <select name="pizza">
+            <option>mussarela (R$9,99)</option>
+            <option>calabresa (R$19,99)</option>
+            <option>frango (R$24,99)</option>
+            <option>portuguesa (R$99,99)</option>
+            <option>bota-tudo (R$29,99)</option>
+            <option>4 queijos (R$14,99)</option>
+            <option>atum (R$0,99)</option>
+            <option>sxchealer (R$19,99)</option>
+        </select>
+
+        <p class="portuguesa">
+            ⚠️ A pizza portuguesa é extremamente rara e vem
+        </p>
+        <p class="portuguesa">
+            de apenas um planeta (a Terra) com apenas 2 países
+        </p>
+        <p class="portuguesa">
+            a produzindo, o que a torna tão cara.
+        </p>
+        <h3 class="portuguesa">
+            isso é inflação espacial.
+        </h3>
+
+        <label>Borda recheada:</label>
+
+        <br><br>
+
+        <select name="borda">
+            <option>nenhuma</option>
+            <option>catupiry (+R$5,00)</option>
+            <option>cheddar (+R$7,00)</option>
+            <option>gleaber (NOVO!!) (+R$7,00)</option>
+        </select>
+
+        <br><br>
+
+        <label>Tamanho da pizza:</label>
+
+        <select name="tamanho">
+            <option>Pequena (-10%)</option>
+            <option>Média</option>
+            <option>Grande (+10%)</option>
+        </select>
+
+        <br><br>
+
+        <label>Bebida:</label>
+
+        <select name="bebida">
+            <option>nenhuma</option>
+            <option>caco cola (+R$2,00)</option>
+            <option>pepsuco (+R$1,50)</option>
+            <option>guaramá (+R$2,00)</option>
+            <option>elefanta (+R$1,00)</option>
+            <option>uisqui (+R$2,50)</option>
+        </select>
+
+        <br><br>
+
+        <button type="submit">
+            Enviar Pedido
+        </button>
+
+    </form>
+
+    <br>
+
+    <a href="/">
+        <button>
+            Voltar
+        </button>
+    </a>
+
+</body>
+</html>

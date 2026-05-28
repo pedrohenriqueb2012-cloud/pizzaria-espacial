@@ -1,0 +1,81 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial;
+}
+
+h1 {
+    animation: cores 5s infinite;
+}
+
+select {
+    background-color: #1a1a1a;
+    color: white;
+    border: 2px solid cyan;
+    border-radius: 10px;
+    padding: 8px;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+select:hover {
+    transform: translateY(-3px);
+    border-color: purple;
+}
+
+button {
+    background-color: purple;
+    color: white;
+
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: translateY(-5px);
+}
+
+input {
+    background-color: #1a1a1a;
+    color: white;
+    border: 2px solid cyan;
+    border-radius: 10px;
+    padding: 8px;
+    font-size: 15px;
+}
+
+.portuguesa {
+    color: red;
+    font-size: 15px;
+}
+
+.planeta {
+    position: absolute;
+    right: 50px;
+    top: 100px;
+    width: 300px;
+
+    transition: 0.2s;
+}
+
+.planeta:hover {
+    transform: translateY(-10px);
+    filter: drop-shadow(0px 0px 20px purple);
+}
+
+@keyframes cores {
+    0% {
+        color: cyan;
+    }
+    25% {
+        color: purple;
+    }
+    50% {
+        color: red;
+    }
+    75% {
+        color: yellowgreen;
+    }
+    100% {
+        color: cyan;
+    }
+}

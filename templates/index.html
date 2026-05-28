@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pedido Espacial</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<form action="/opcao" method="POST">
+    
+    <label>Nome do astronauta:</label>
+    <input type="text" name="nome" required maxlength="15" placeholder="Digite seu nome">
+
+    <br><br>
+
+    <label>Escolha o planeta:</label>
+    <select name="planeta">
+        <option>Mercúrio</option>
+        <option>Vênus</option>
+        <option>Terra</option>
+        <option>Marte</option>
+        <option>Júpiter</option>
+        <option>Saturno</option>
+        <option>Urano</option>
+        <option>Netuno</option>
+    </select>
+
+    <br><br>
+
+    <button type="submit">
+        Próximo
+    </button>
+</form>
+
+</body>
+</html>
